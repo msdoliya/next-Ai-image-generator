@@ -8,6 +8,7 @@ import Loader from '@/components/Loader'
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import logo from '@/assets/download.png'
+import Head from 'next/head';
 const CreatePost = () => {
   const router = useRouter();
 
@@ -86,6 +87,13 @@ const CreatePost = () => {
 
   return (
     <section  className="max-w-7xl flex justify-center items-center mx-auto">
+    <Head>
+   
+      <title>
+        AI IMAGE GENERATOR
+      </title>
+    </Head>
+
       {/* <div>
         <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
         <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">Generate an imaginative image through DALL-E AI and share it with the community</p>
@@ -93,14 +101,14 @@ const CreatePost = () => {
 
       <form className="mt-7 max-w-3xl" onSubmit={handleSubmit}>
         <div style={{justifyContent:'center'}} className="flex flex-col  gap-2">
-          {/* <FormField
+          <FormField
             labelName="Your Name"
             type="text"
             name="name"
             placeholder="Ex., john doe"
             value={form.name}
             handleChange={handleChange}
-          /> */}
+          />
 
           <FormField
             labelName="Prompt"
